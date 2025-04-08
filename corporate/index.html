@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - XX建設株式会社</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mask"></div>
+    <header class="wrapper">
+        <a class="logo" href="#"><img src="img/logo.svg" alt="" width="300px"></a>
+        <nav>
+            <button id="js-hamBtn"><img src="img/hamBtn.svg" alt="" width="40px"></button>
+            <ul id="js-hamPanel" class="hidden">
+                <button id="js-closeBtn"><img src="img/closeBtn.svg" alt="" width="40px"></button>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#csr">CSR</a></li>
+                <li><a href="#news">NEWS</a></li>
+                <li class="contact"><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="mainvisual">
+        <img class="js-slideshow show" src="img/mainvisual.jpg" alt="">
+        <img class="js-slideshow" src="img/slideshow2.jpg" alt="">
+        <img class="js-slideshow" src="img/slideshow3.jpg" alt="">
+        <div class="mainvisual-text">
+            <h1>Innovating Construction</h1>
+            <p>確かな技術で、未来を築く</p>
+        </div>
+    </div>
+
+    <section class="js-animation" id="about">
+        <img class="about-svg" src="img/about.svg" alt="">
+        <div class="wrapper">
+            <div class="about-heading">
+                <div class="about-h2 js-animation"><h2>私たちについて</h2></div>
+                <h3>お客様の信頼を第一に、<br>品質、効率、安全性を徹底し、<br>より良い未来を築くための<br>プロジェクトを提供しています。</h3>
+            </div>
+            <div class="about-text">
+                <p>私たちの目標は、単なる建物の建設に留まらず、<br>地域社会や環境にも配慮した持続可能な施工を行うことです。</p>
+                <p>持続可能な建設を推進し、エコフレンドリーな素材や方法を積極的に採用しています。<br>環境負荷を最小限に抑えることが、私たちの社会的責任だと考えています。</p>
+                <p>私たちは、ただの建設業者ではなく、クライアントの夢を形にするパートナーです。<br>未来を見据えた技術を用い、地域社会と環境に貢献できる建設を目指し、常に革新と品質の向上を追求しています。</p>
+                <a class="readmore" href="#">READ MORE<span>→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <div id="slider" class="js-animation">
+        <div class="slider1">
+            <img src="img/slider1.jpg" alt="">
+            <img src="img/slider2.jpg" alt="">
+            <img src="img/slider3.jpg" alt="">
+            <img src="img/slider4.jpg" alt="">
+            <img src="img/slider5.jpg" alt="">
+        </div>
+        <div class="slider2">
+            <img src="img/slider1.jpg" alt="">
+            <img src="img/slider2.jpg" alt="">
+            <img src="img/slider3.jpg" alt="">
+            <img src="img/slider4.jpg" alt="">
+            <img src="img/slider5.jpg" alt="">
+        </div>
+    </div>
+
+    <section id="works">
+        <div class="works1 js-animation">
+            <img class="works-svg" src="img/works.svg" alt="">
+            <div class="works-visual"></div>
+            <div class="works-text">
+                <div class="works-h2 js-animation"><h2>私たちのプロジェクト</h2></div>
+                <p>
+                    住宅、商業施設、公共事業、<br>インフラの整備など、<br>
+                    あらゆる分野でお客様のニーズに合わせた<br>最適なソリューションを提供し、<br>
+                    品質、コスト、納期のすべてにおいて<br>優れた結果を実現しています。
+                </p>
+                <a class="readmore" href="#">READ MORE<span>→</span></a>
+            </div>
+        </div>
+        <ul class="works2 js-animation">
+            <li><a href="#"><div class="imgbox"><img src="img/project1.jpg" alt=""></div><p>プロジェクト1<span class="arrow">→</span><br><span class="subtext">PROJECT1</span></p></a></li>
+            <li><a href="#"><div class="imgbox"><img src="img/project2.jpg" alt=""></div><p>プロジェクト2<span class="arrow">→</span><br><span class="subtext">PROJECT2</span></p></a></li>
+            <li><a href="#"><div class="imgbox"><img src="img/project3.jpg" alt=""></div><p>プロジェクト3<span class="arrow">→</span><br><span class="subtext">PROJECT3</span></p></a></li>
+            <li><a href="#"><div class="imgbox"><img src="img/project4.jpg" alt=""></div><p>プロジェクト4<span class="arrow">→</span><br><span class="subtext">PROJECT4</span></p></a></li>
+        </ul>
+    </section>
+
+    <section id="csr" class="js-animation">
+        <img class="csr-svg" src="img/csr.svg" alt="">
+        <div class="csr-imgbox"><img src="img/csr.jpg" alt=""></div>
+        <div class="wrapper">
+            <div class="csr-text">
+                <div class="csr-h2 js-animation"><h2>地域社会への貢献</h2></div>
+                <p>
+                    地元の人々や企業との<br>つながりを大切にし、<br>地域の活性化に貢献する<br>さまざまな取り組みを<br>行っています。
+                </p>
+            </div>
+            <a class="readmore" href="#">READ MORE<span>→</span></a>
+        </div>
+    </section>
+
+    <section id="news" class="js-animation">
+        <div class="news-imgbox">
+            <img class="news-svg" src="img/news.svg" alt="">
+            <img class="news-svg" src="img/news.svg" alt="">
+        </div>
+        <div class="wrapper">
+            <div class="news-h2 js-animation"><h2>お知らせ</h2></div>
+            <div class="news-left">
+                <ul>
+                    <li>2025.03.10<br>「新プロジェクト着工のお知らせ」<br><span>函館市にて新たな商業施設建設プロジェクトが始まりました。地域の皆さまに愛される施設を目指し、安全かつスムーズな施工を進めてまいります。</span></li>
+                    <li>2025.02.28<br>「ISO認証取得のお知らせ」<br><span>当社は品質管理および環境管理の国際基準であるISO9001・ISO14001の認証を取得しました。今後も持続可能な建設を推進し、高品質なサービスを提供いたします。</span></li>
+                    <li>2025.02.10<br>「地域清掃活動を実施しました」<br><span>地域貢献の一環として、地元の皆さまと一緒に清掃活動を行いました。これからも地域の環境美化に取り組んでまいります。</span></li>
+                </ul>
+                <a class="readmore" href="#">READ MORE<span>→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-wrap">
+        <section id="contact">
+            <div class="wrapper">
+                <h2>お問い合わせ</h2>
+                <p>CONTACT</p>
+                <ul>
+                    <li>
+                        <div class="inner">
+                            <img src="img/phone.svg" alt="">
+                            お電話でのお問い合わせ<br>
+                            <span class="tel">0123-45-6789</span><br>
+                            <span class="hours">営業時間 8:00～17:00</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <img src="img/mail.svg" alt="">
+                            メールでのお問い合わせ<br>
+                            <a class="mail" href="#">メールフォームへ</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="wrapper">
+                <div class="left">
+                    <h1>〇△建設株式会社</h1>
+                    <p>012-3456 北海道函館市XX町12-34<br>TEL.0123-45-6789</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">WORKS</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">CSR</a></li>
+                        <li><a href="#">NEWS</a></li>
+                    </ul>
+                    <ul>
+                        <li class="contact"><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </nav>            
+            </div>
+            <span class="border"></span>
+            <div class="copyright"><small>2025 copyright</small></div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
