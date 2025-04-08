@@ -1,0 +1,920 @@
+@charset "utf-8";
+a:focus,button:focus,input:focus,select:focus,textarea:focus {
+    outline-width: 1px;
+}
+:root{
+    --main-bg: white;
+    --main-text: #003A57;
+    --text-white: white;
+    --text-black: black;
+    --accent-color: #006AB8;
+    --sub-color: #C6E5E2;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
+}
+img{
+    max-width: 100%;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--main-text);
+}
+section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.headings{
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.8rem;
+    font-family: "Josefin Sans", '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.headings span{
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+/* メインビジュアル,nav */
+#mainvisual{
+    height: 100vh;
+    position: relative;
+    background-image: url(img/bg_whiter.png);
+}
+.header_nav{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    line-height: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3rem;
+    z-index: 10;
+}
+.header_nav a{
+    display: inline-block;
+    padding: 5px;
+    transition: .5s;
+}
+.header_nav a:hover{
+    transform: translateX(5px);
+}
+#hamBtn{
+    display: none;
+}
+#hamPanel{
+    display: none;
+}
+.mainvisual_container{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    border-radius: 20px;
+    width: 75%;
+    height: 90%;
+    overflow: hidden;
+}
+#mainvisual img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    transition: 1.5s;
+    position: absolute;
+    top: 0;
+    animation: blur 1s linear;
+}
+.mainvisuals.hidden{
+    opacity: 0;
+}
+.mainvisual_text{
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 50px;
+    width: fit-content;
+}
+#mainvisual h1{
+    font-weight: 300;
+    font-size: max(1.1rem, 3vw);
+}
+#mainvisual h2{
+    font-size: 2.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    padding: 10px 0;
+}
+.ctaButton{
+    position: absolute;
+    right: 60px;
+    bottom: 30px;
+}
+.ctaButton a{
+    display: inline-block;
+    color: var(--main-bg);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    line-height: 150px;
+    text-align: center;
+    opacity: 0.8;
+    transition: .5s;
+}
+.ctaButton a:hover{
+    opacity: 0.6;
+    transform: translateY(-10px);
+}
+.scroll{
+    position: absolute;
+    right: 5px;
+    bottom: 53px;
+    writing-mode: vertical-rl;
+}
+.scroll::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+    height: 100px;
+    width: 0.5px;
+    border-right: 0.5px solid;
+    margin-top: 3px;
+    animation: scroll 1s infinite;
+}
+@keyframes scroll{
+    0%{height: 0;}
+    100%{height: 100px;}
+}
+#top{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    animation: fadeIn .5s linear forwards;
+    z-index: 50;
+}
+#top button{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80px;
+    height: 80px;
+    line-height: 20px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    transition: 0.5s;
+    font-family: "Josefin Sans", '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+}
+#top button:hover{
+    transform: scale(1.2);
+}
+#top.hidden{
+    display: none;
+}
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@media screen and (max-width: 600px){
+    .mainvisual_container{
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        border-radius: 20px;
+        width: 90%;
+        height: 80%;
+        overflow: hidden;
+    }
+    #mainvisual img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: bottom left;
+        position: absolute;
+        top: 0;
+    }
+    .mainvisual_text{
+        position: absolute;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.47);
+        padding: 20px;
+        width: max(320px, 85%);
+    }
+    .mainvisual_text p{
+        font-size: 0.8rem;
+        letter-spacing: normal;
+    }
+    .ctaButton{
+        position: absolute;
+        right: 3%;
+        bottom: 3%;
+    }
+    .ctaButton a{
+        display: inline-block;
+        color: var(--main-bg);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        /* border: 1px solid var(--main-text); */
+        line-height: 100px;
+        text-align: center;
+        opacity: 0.8;
+        transition: .5s;
+        font-size: 0.8rem;
+    }
+    .scroll{
+        position: absolute;
+        right: 3%;
+        top: 50%;
+        writing-mode: vertical-rl;
+    }
+    #hamBtn{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 25px;
+        z-index: 20;
+    }
+    #hamBtn span{
+        display: block;
+        width: 30px;
+        height: 1px;
+        border-top: 1px solid;
+        margin-bottom: 10px;
+    }
+    .header_nav{
+        display: none;
+    }
+    #hamPanel.show{
+        position: fixed;
+        inset: 0;
+        display: block;
+        padding: 50px 3% 10px;
+        background-image: url(img/bg_blur.png);
+        color: var(--text-white);
+        font-family: "Josefin Sans", sans-serif;
+        z-index: 30;
+        overflow-y: scroll;
+    }
+    .ham_nav a{
+        display: inline-block;
+        color: var(--text-white);
+        padding: 20px;
+        transition: .5s;
+        border-bottom: 1px solid white;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .ham_nav{
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    .ham_nav span{
+        font-size: 0.9rem;
+        margin-left: 5px;
+    }
+    .ham_nav a:hover{
+        transform: translateX(10px);
+    }
+    #hamPanel .shop2{
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    #hamPanel .shop2 h2{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    #hamPanel .shop2 h2 span{
+        display: none;
+    }
+    #hamPanel .shop2 a{
+        background-color: var(--main-bg);
+    }
+    #hamPanel .shop2 a:hover{
+        background-color: var(--main-text);
+        color: var(--main-bg);
+    }
+    #hamPanel .ham_sns a{
+        color: var(--main-bg);
+    }
+    .ham_sns{
+        display: flex;
+        justify-content: flex-end;
+        font-size: 2rem;
+    }
+    .ham_sns a:hover{
+        transform: translateY(-5px);
+    }
+    .ham_sns li{
+        width: 50px;
+    }
+    #closeBtn{
+        padding: 10px 15px;
+        background-color: var(--main-bg);
+        border-radius: 20px;
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+/* コンセプト */
+#concept{
+    position: relative;
+}
+#concept h2.anime-on{
+    animation: slideIn .5s linear forwards, fadeIn .5s linear forwards;
+}
+@keyframes slideIn{
+    0%{transform: translateY(50px);}
+    100%{transform: translateY(0);}
+}
+#concept h2{
+    margin-bottom: 50px;
+    opacity: 0;
+}
+.blob-bg1{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 70%;
+    opacity: 0.3;
+    z-index: -1;
+    animation: plx_slow linear;
+    animation-timeline: view();
+}
+.blob-bg2{
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    width: 60%;
+    opacity: 0.3;
+    z-index: -1;
+    animation: plx_slow linear;
+    animation-timeline: view();
+}
+.bubble1{
+    position: absolute;
+    top: 15%;
+    left: 3%;
+    width: 15%;
+    opacity: 0.5;
+    animation: plx_fast linear;
+    animation-timeline: view();
+    z-index: 10;
+}
+.bubble2{
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    width: 12%;
+    opacity: 0.5;
+    animation: plx_fast linear;
+    animation-timeline: view();
+    z-index: 10;
+}
+.bubble3{
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    width: 12%;
+    opacity: 0.5;
+    animation: plx_fast linear;
+    animation-timeline: view();
+    z-index: 10;
+}
+.bubble4{
+    position: absolute;
+    top: 75%;
+    right: 2%;
+    width: 12%;
+    opacity: 0.5;
+    animation: plx_fast linear;
+    animation-timeline: view();
+    z-index: 10;
+}
+.bubble5{
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 15%;
+    opacity: 0.5;
+    animation: plx_fast linear;
+    animation-timeline: view();
+    z-index: 10;
+}
+.concept-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.concept_img{
+    width: 30%;
+}
+.concept_img img{
+    object-fit: cover;
+    border-radius: 5px;
+    filter: blur(5px);
+}
+.concept_img img.anime-on{
+    animation: blur .5s linear forwards;
+}
+@keyframes blur{
+    0%{filter: blur(5px);}
+    100%{filter: blur(0);}
+}
+.concept-text{
+    width: 50%;
+    padding: 5%;
+    opacity: 0;
+}
+.concept-text.anime-on{
+    animation: fadeIn .5s linear forwards, slideIn .5s linear forwards;
+}
+#concept h3{
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding: 20px 0;
+    line-height: 3rem;
+}
+#concept p{
+    line-height: 2.5rem;
+    padding: 20px 0;
+}
+#concept a{
+    display: block;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+#concept a::after, #concept a::before{
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 0.5px;
+    border-top: 0.5px solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: middle;
+    transition: .5s;
+}
+#concept a:hover::after, #concept a:hover::before{
+    animation: hover .2s linear forwards;
+}
+@keyframes hover{
+    0%{width: 5px;}
+    100%{width: 50px;}
+}
+
+
+/* パララックス用 */
+@keyframes plx_slow{
+    from{transform: translateY(-100px);}
+    to{transform: translateY(0px);}
+}
+@keyframes plx_fast{
+    from{transform: translateY(100px);}
+    to{transform: translateY(-100px);}
+}
+
+@media screen and (max-width: 700px){
+    .concept-flex{
+        position: relative;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .concept_img{
+        width: 40%;
+    }
+    .concept_img.center{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .concept_img.right{
+        margin-left: auto;
+    }
+    .concept-text{
+        width: 100%;
+        padding: 5%;
+        text-shadow: 0 0 3px white;
+    }
+    #concept h3{
+        font-size: 1.3rem;
+        font-weight: 300;
+        padding: 10px 0;
+        line-height: 2.5rem;
+    }
+    #concept p{
+        line-height: 2rem;
+        padding: 10px 0;
+    }
+    .blob-bg1, .blob-bg2{
+        width: 100%;
+        left: 0;
+        z-index: -5;
+    }
+}
+
+/* 商品紹介 */
+#products{
+    background-image: url(img/bg_whiter.png);
+    padding: 100px 0 50px;
+    filter: blur(5px);
+}
+#products.anime-on{
+    animation: blur .5s linear forwards;
+}
+.products-container{
+    overflow: hidden;
+    width: 100%;
+}
+.products-flex{
+    display: flex;
+    width: calc((70vw + 40px) * 5 + (15vw - 20px));
+    transition: .5s;
+}
+.products-flex li{
+    width: 70vw;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--main-bg);
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.products-flex li:first-child{
+    margin-left: 15vw;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.buttons #prev{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50% 0 0 50%;
+    margin-right: 1px;
+}
+.buttons #next{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 0 50% 50% 0;
+    margin-right: 10px;
+}
+.products-flex img{
+    width: 40%;
+    height: 80%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.product_text{
+    width: 60%;
+    padding: 3% 5% 5% 5%;
+    height: 100%;
+    position: relative;
+}
+.product_text p{
+    margin-bottom: 15px;
+    text-align: left;
+}
+.product_text p.product_name{
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+.product_text .bigger{
+    font-size: 1.5rem;
+}
+.viewmore{
+    display: block;
+    padding: 5px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+    color: var(--text-white);
+    background-color: var(--accent-color);
+    font-size: 0.8rem;
+    border: 1px solid var(--accent-color);
+    transition: .5s;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.viewmore:hover{
+    background-color: var(--main-bg);
+    color: var(--accent-color);
+}
+@media screen and (max-width: 700px){
+    .products-flex{
+        width: calc((60vw + 20px) * 5 + (20vw - 10px));
+    }
+    .products-flex li{
+        width: 60vw;
+        padding: 10px;
+        margin: 10px;
+        flex-direction: column;
+    }
+    .products-flex li:first-child{
+        margin-left: 20vw;
+    }
+    .products-flex img{
+        width: 100%;
+        aspect-ratio: 1.3;
+    }
+    .product_text{
+        width: 100%;
+        padding: 5px 5px 30px 5px;
+    }
+    .product_text p{
+        margin-bottom: 10px;
+        text-align: left;
+        font-size: 0.8rem;
+    }
+    .product_text p.product_name{
+        color: var(--accent-color);
+        margin-bottom: 15px;
+    }
+    .product_text .bigger{
+        font-size: 1.1rem;
+    }
+    .viewmore{
+        display: block;
+        padding: 5px;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 15px;
+        color: var(--text-white);
+        background-color: var(--accent-color);
+        font-size: 0.8rem;
+        border: 1px solid var(--accent-color);
+        transition: .5s;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .buttons{
+        justify-content: center;
+    }
+    .buttons #next{
+        margin-right: 0;
+    }
+}
+
+#mid_visual{
+    display: block;
+    height: 40vh;
+    width: 100vw;
+    padding: 0;
+    background-image: url(img/mainvisual.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center -50px;
+    /* JSでbackground-positionを動的に変化させていく */
+}
+
+/* SHOP */
+#shop{
+    padding-right: 3%;
+    padding-left: 3%;
+}
+#shop h2{
+    width: 30%;
+}
+.shop1{
+    display: flex;
+    justify-content: space-between;
+}
+.shop1_right{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+.shop1_right ul{
+    width: 32%;
+}
+.shop1_right li{
+    border-bottom: 0.5px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+#shop p{
+    text-align: right;
+    padding: 5px;
+}
+.shop2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.shop2_right{
+    width: 60%;
+}
+.shop2_right ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.shop2_right li{
+    width: 48%;
+}
+.shop2_right li a{
+    display: inline-block;
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    border-radius: 20px;
+    text-align: center;
+    transition: .5s;
+}
+.shop2_right li a:hover{
+    background-color: var(--main-text);
+    color: var(--main-bg);
+}
+@media screen and (max-width: 900px) and (min-width: 600px){
+    .shop1{
+        flex-direction: column;
+    }
+    .shop2{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    #shop h2{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .shop1_right{
+        width: 100%;
+    }
+    .shop2_right{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 600px){
+    .shop1{
+        flex-direction: column;
+    }
+    .shop2{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    #shop h2{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .shop1_right{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .shop1_right ul{
+        width: 50%;
+    }
+    #shop p{
+        text-align: center;
+    }
+    .shop2_right{
+        width: 100%;
+        flex-direction: column;
+    }
+    .shop2_right li{
+        width: 80%;
+    }
+}
+
+/* よくある質問 */
+#faq{
+    padding-right: 3%;
+    padding-left: 3%;
+    background-color: var(--sub-color);
+}
+#faq .faq_container{
+    margin: 50px auto;
+    line-height: 2rem;
+    width: 80%;
+}
+#faq .faq_btn{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    padding: 20px;
+    border: 2px solid white;
+    position: relative;
+    border-radius: 10px;
+    color: var(--main-text);
+}
+#faq .faq_btn:hover{
+    cursor: pointer;
+}
+#faq .faq_btn img{
+    position: absolute;
+    right: 10px;
+    transition: .5s;
+    width: 30px;
+}
+.answer_wrapper{
+    overflow: hidden;
+}
+.answer_wrapper.hidden{
+    height: 0;
+    animation: faq .5s forwards;
+}
+#faq .faq_answer{
+    background-color: white;
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+}
+@keyframes faq{
+    0%{height: 5rem;}
+    100%{height: 0;}
+}
+@media screen and (max-width: 600px){
+    #faq .faq_container{
+        margin: 50px auto;
+        line-height: 2rem;
+        width: 80%;
+    }
+}
+
+/* フッター */
+footer{
+    padding: 100px 3% 20px;
+    background-image: url(img/bg_blur.png);
+    background-attachment: fixed;
+    color: var(--text-white);
+    font-family: "Josefin Sans", sans-serif;
+}
+.footer_nav{
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+}
+.footer_nav span{
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+.footer_nav a{
+    padding: 15px 0;
+    transition: .5s;
+}
+.footer_nav a:hover{
+    transform: translateX(10px);
+}
+.footer_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+footer a{
+    display: inline-block;
+    color: var(--text-white);
+    padding: 10px 0;
+    transition: .5s;
+}
+.footer_left{
+    font-size: 0.8rem;
+}
+.footer_left a:hover{
+    transform: translateX(5px);
+}
+.footer_right{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+}
+.footer_right a:hover{
+    transform: translateY(-5px);
+}
+.footer_right li{
+    width: 50px;
+}
+.copyright{
+    text-align: center;
+    margin-top: 50px;
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio1 - SKINBAR</title>
+    <link rel="stylesheet" href="ress.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9caeda0ce5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="mainvisual">
+        <header>
+            <button id="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="hamPanel">
+                <button id="closeBtn">CLOSE</button>
+                <nav class="ham_nav">
+                    <ul>
+                        <li><a href="#">TOP<span>トップページ</span></a></li>
+                        <li><a href="#concept">CONCEPT<span>SKINBARについて</span></a></li>
+                        <li><a href="#products">PRODUCTS<span>商品紹介</span></a></li>
+                        <li><a href="#shop">SHOP<span>お取り扱い店舗一覧</span></a></li>
+                        <li><a href="#faq">FAQ<span>よくあるご質問</span></a></li>            
+                    </ul>
+                </nav>
+                <div class="shop2">
+                    <h2 class="headings">ONLINE SHOP<br><span>オンラインでのご購入はこちらから</span></h2>
+                    <div class="shop2_right">
+                        <ul>
+                            <li><a href="">公式ストアで購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                            <li><a href="">Amazonで購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                            <li><a href="">Rakutenで購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                            <li><a href="">Yahoo!で購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="ham_sns">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></i></a></li>
+                </ul>
+            </div>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#concept">CONCEPT</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="mainvisual_container">
+            <img class="mainvisuals" src="img/mainvisual_resized.png" alt="">
+            <img class="mainvisuals hidden" src="img/subvisual.jpg" alt="">
+        </div>
+        <div class="mainvisual_text">
+            <h1>自然の恵みで輝く、<br>あなたの素肌へ</h1>
+            <h2>SKINBAR</h2>
+            <p>オーガニック成分100%使用。<br>肌にやさしいスキンケア</p>
+        </div>
+        <div class="ctaButton">
+            <a href="#">今すぐ試す</a>
+        </div>
+        <p class="scroll">scroll</p>
+    </div>
+
+    <div id="top" class="hidden">
+        <button onclick="scrollToTop()"><i class="fa-solid fa-caret-up"></i><br>PAGE TOP</button>
+    </div>
+
+    <section id="concept">
+        <h2 class="headings js-animation">CONCEPT<br><span>SKINBARについて</span></h2>
+ 
+        <div class="concept-flex">
+            <div class="concept_img center">
+                <img class="js-animation" src="img/subvisual.jpg" alt="">
+            </div>
+            <div class="concept-text js-animation">
+                <h3>自然の恵みを凝縮した、<br>植物由来の成分</h3>
+                <p>植物エキスやオーガニックオイルを贅沢に配合し、<br>肌本来の美しさを引き出します。<br>まるで自然に包まれているかのようなうるおいを実感しながら、<br>あなたの肌に自信を取り戻しませんか？</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="concept-flex">
+            <div class="concept-text js-animation">
+                <h3>自然の恵みを凝縮した、<br>植物由来の成分</h3>
+                <p>植物エキスやオーガニックオイルを贅沢に配合し、<br>肌本来の美しさを引き出します。<br>まるで自然に包まれているかのようなうるおいを実感しながら、<br>あなたの肌に自信を取り戻しませんか？</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="concept_img right">
+                <img class="js-animation" src="img/mainvisual.jpg" alt="">
+            </div>
+        </div>
+
+            <img class="blob-bg1" src="img/frame6.png" alt="">
+            <img class="blob-bg2" src="img/frame6.png" alt="">
+            <img class="bubble1" src="img/bubble.png" alt="">
+            <img class="bubble2" src="img/bubble.png" alt="">
+            <img class="bubble3" src="img/bubble.png" alt="">
+            <img class="bubble4" src="img/bubble.png" alt=""> 
+            <img class="bubble5" src="img/bubble.png" alt=""> 
+
+    </section>
+
+    <section id="products" class="js-animation">
+        <h2 class="headings">PRODUCTS<br><span>商品紹介</span></h2>
+        <div class="products-container">
+            <ul class="products-flex" id="js-productsBox">
+                <li>
+                    <img src="img/product2.jpg" alt="">
+                    <div class="product_text">
+                        <p class="bigger">毎日使える<br>低刺激ビタミンC美容液</p>
+                        <p class="product_name">リッチビタミンC10% セラム 敏感肌用</p>
+                        <p class="product_detail">植物エキスやオーガニックオイルを贅沢に配合し、肌本来の美しさを引き出します。</p>
+                        <p class="product_price">30ml/25g <span class="bigger">¥5,890</span> 税込</p>
+                        <a class="viewmore" href="">- 詳細を見る -</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/product3.jpg" alt="">
+                    <div class="product_text">
+                        <p class="bigger">毎日使える<br>低刺激ビタミンC美容液</p>
+                        <p class="product_name">リッチビタミンC10% セラム 敏感肌用</p>
+                        <p class="product_detail">植物エキスやオーガニックオイルを贅沢に配合し、肌本来の美しさを引き出します。</p>
+                        <p class="product_price">30ml/25g <span class="bigger">¥5,890</span> 税込</p>
+                        <a class="viewmore" href="">- 詳細を見る -</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/product4.jpg" alt="">
+                    <div class="product_text">
+                        <p class="bigger">毎日使える<br>低刺激ビタミンC美容液</p>
+                        <p class="product_name">リッチビタミンC10% セラム 敏感肌用</p>
+                        <p class="product_detail">植物エキスやオーガニックオイルを贅沢に配合し、肌本来の美しさを引き出します。</p>
+                        <p class="product_price">30ml/25g <span class="bigger">¥5,890</span> 税込</p>
+                        <a class="viewmore" href="">- 詳細を見る -</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/product5.jpg" alt="">
+                    <div class="product_text">
+                        <p class="bigger">毎日使える<br>低刺激ビタミンC美容液</p>
+                        <p class="product_name">リッチビタミンC10% セラム 敏感肌用</p>
+                        <p class="product_detail">植物エキスやオーガニックオイルを贅沢に配合し、肌本来の美しさを引き出します。</p>
+                        <p class="product_price">30ml/25g <span class="bigger">¥5,890</span> 税込</p>
+                        <a class="viewmore" href="">- 詳細を見る -</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/product4.jpg" alt="">
+                    <div class="product_text">
+                        <p class="bigger">毎日使える<br>低刺激ビタミンC美容液</p>
+                        <p class="product_name">リッチビタミンC10% セラム 敏感肌用</p>
+                        <p class="product_detail">植物エキスやオーガニックオイルを贅沢に配合し、肌本来の美しさを引き出します。</p>
+                        <p class="product_price">30ml/25g <span class="bigger">¥5,890</span> 税込</p>
+                        <a class="viewmore" href="">- 詳細を見る -</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button id="prev">←</button>
+            <button id="next">→</button>
+        </div>
+    </section>
+    <section id="shop">
+        <div class="shop1">
+            <h2 class="headings">SHOP LIST<br><span>お取り扱い店舗一覧</span></h2>
+            <div class="shop1_right">
+                <ul>
+                    <li>AINZ&TULPE</li>
+                    <li>ロフト</li>
+                    <li>ドン・キホーテ</li>
+                    <li>サンドラッグ</li>
+                </ul>
+                <ul>
+                    <li>ツルハドラッグ</li>
+                    <li>富士薬品グループ</li>
+                    <li>コクミン</li>
+                    <li>ハンズ</li>
+                </ul>
+                <ul>
+                    <li>ウエルシア薬局</li>
+                    <li>マツモトキヨシ</li>
+                </ul>
+            </div>
+        </div>
+        <p><small>※一部店舗ではお取り扱いがない場合がございます。</small></p>
+
+        <div class="shop2">
+            <h2 class="headings">ONLINE SHOP<br><span>オンラインでのご購入</span></h2>
+            <div class="shop2_right">
+                <ul>
+                    <li><a href="">公式ストアで購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li><a href="">Amazonで購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li><a href="">Rakutenで購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li><a href="">Yahoo!で購入する<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="mid_visual">
+    </section>
+
+    <section id="faq">
+        <h2 class="headings">FAQ<br><span>よくあるご質問</span></h2>
+        <div class="faq_container">
+            <button class="faq_btn">Q: 敏感肌でも使えますか？<img src="img/faqBtn.svg" alt=""></button>
+            <div class="answer_wrapper hidden">
+                <p class="faq_answer">A: はい。低刺激処方で作られているため、敏感肌の方にも安心してご使用いただけます。</p>
+            </div>
+            <button class="faq_btn">Q: 製品は動物実験を行っていますか？<img src="img/faqBtn.svg" alt=""></button>
+            <div class="answer_wrapper hidden">
+                <p class="faq_answer">A: いいえ。当社の製品はすべてクルエルティフリーで、動物実験は一切行っていません。</p>
+            </div>
+            <button class="faq_btn">Q: 返品・交換はできますか？<img src="img/faqBtn.svg" alt=""></button>
+            <div class="answer_wrapper hidden">
+                <p class="faq_answer">A: 商品に不備があった場合は、到着後7日以内にご連絡いただければ対応いたします。</p>
+            </div>
+            <button class="faq_btn">Q: サステナブルな取り組みについて教えてください。<img src="img/faqBtn.svg" alt=""></button>
+            <div class="answer_wrapper hidden">
+                <p class="faq_answer">A: 環境に配慮したパッケージや、再生可能な資源の使用を積極的に取り入れています。</p>
+            </div>
+            <button class="faq_btn">Q: オーガニック成分とは何ですか？<img src="img/faqBtn.svg" alt=""></button>
+            <div class="answer_wrapper hidden">
+                <p class="faq_answer">A: オーガニック成分は、化学肥料や農薬を使わずに栽培された植物由来の原料です。</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <nav class="footer_nav">
+            <ul>
+                <li><a href="#">TOP<span>トップページ</span></a></li>
+                <li><a href="#concept">CONCEPT<span>SKINBARについて</span></a></li>
+                <li><a href="#products">PRODUCTS<span>商品紹介</span></a></li>
+                <li><a href="#shop">SHOP<span>お取り扱い店舗一覧</span></a></li>
+                <li><a href="#faq">FAQ<span>よくあるご質問</span></a></li>            
+            </ul>
+        </nav>
+        <div class="footer_flex">
+            <ul class="footer_left">
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+            </ul>
+            <ul class="footer_right">
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-x-twitter"></i></i></a></li>
+            </ul>
+        </div>
+        <div class="copyright"><small>copyright 2025</small></div>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
