@@ -672,6 +672,7 @@ button{
 .bg-wrap{
     background-image: url(img/footer-bg.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 #contact{
     text-align: center;
