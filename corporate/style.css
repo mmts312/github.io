@@ -396,7 +396,7 @@ button{
     background-image: linear-gradient(to top, #ffffff4d 0%, #ffffff00 100%), url(img/works-visual.jpg);
     /* 写真の下のほうが暗すぎて文字よめないのでグラデーション重ねた */
     background-size: cover;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 }
 #works{
     position: relative;
