@@ -46,6 +46,9 @@ li{
     opacity: 0.9;
     transition: .5s;
 }
+.floatingBtn:hover{
+    transform: translateY(-10px);
+}
 .floatingBtn.hidden{
     opacity: 0;
 }
@@ -96,8 +99,8 @@ li{
     100%{transform: scaleX(120%) translateX(5%);}
 }
 @keyframes fadeIn{
-    0%{opacity: 0; transform: translateY(30px);}
-    100%{opacity: 1; transform: translateY(0);}
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 @keyframes height{
     0%{height: 100vh;}
@@ -149,7 +152,11 @@ li{
     opacity: 0;
 }
 .about_pic.anime-on{
-    animation: fadeIn ease 1s forwards;
+    animation: slideIn ease 1s forwards;
+}
+@keyframes slideIn{
+    0%{opacity: 0; transform: translateY(50px);}
+    100%{opacity: 1; transform: translateY(0);}
 }
 @media screen and (max-width:500px){
     #about p{
@@ -180,7 +187,7 @@ li{
     opacity: 0;
 }
 #freetrial .inner.anime-on{
-    animation: fadeIn 1s forwards;
+    animation: slideIn 1s forwards;
 }
 #freetrial h2{
     font-size: 3rem;
@@ -274,7 +281,7 @@ li{
 }
 .trial_pic img:first-child.anime-on,
 .trial_pic img:nth-child(2).anime-on{
-    animation: fadeIn 2s forwards;
+    animation: slideIn 2s forwards;
 }
 
 .line{
@@ -423,7 +430,7 @@ li{
     opacity: 0;
 }
 #features h2.anime-on{
-    animation: fadeIn 1s forwards;
+    animation: slideIn 1s forwards;
 }
 #features h2 span{
     font-size: 1.2rem;
@@ -453,13 +460,13 @@ li{
     opacity: 0;
 }
 #features li.anime-on{
-    animation: fadeIn 1s forwards;
+    animation: slideIn 1s forwards;
 }
 #features li:nth-child(2n){
     margin-right: 0;
 }
 #features li:nth-child(2n).anime-on{
-    animation: fadeIn 1s .2s forwards;
+    animation: slideIn 1s .2s forwards;
 }
 .features_text{
     background-color: var(--bg-color);
@@ -545,7 +552,7 @@ li{
     left: 5%;
 }
 #voices .anime-on{
-    animation: fadeIn 1s forwards;
+    animation: slideIn 1s forwards;
 }
 #voices p{
     margin: 8px 0;
@@ -656,7 +663,7 @@ li{
     margin-bottom: 30px;
 }
 #faq .anime-on{
-    animation: fadeIn 1s forwards;
+    animation: slideIn 1s forwards;
 }
 #faq h2 span{
     font-size: 8rem;
@@ -730,7 +737,7 @@ li{
         margin-bottom: 20px;
     }
     #faq .anime-on{
-        animation: fadeIn 1s forwards;
+        animation: slideIn 1s forwards;
     }
     #faq h2 span{
         font-size: 4rem;
@@ -781,7 +788,7 @@ li{
         display: none;
     }
     #faq .faq_flex dl:nth-child(2).anime-on{
-        animation: fadeIn 1s forwards;
+        animation: slideIn 1s forwards;
     }
 }
 
