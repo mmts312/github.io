@@ -177,7 +177,7 @@ function plx(entry){
     if(entry[0].isIntersecting === true){
         window.addEventListener('scroll', () => {
             const midVisualTop = midVisual.getBoundingClientRect().top;
-            midVisual.style.backgroundPosition = "center " + midVisualTop * 0.5 + "px";
+            midVisual.style.backgroundPosition = "center " + "-" + midVisualTop * 0.2 + "px";
         }) 
     }
 }

@@ -692,8 +692,13 @@ section{
     background-image: url(img/mainvisual.jpg);
     background-attachment: fixed;
     background-size: 100%;
-    background-position: center -50px;
+    background-position: center;
     /* JSでbackground-positionを動的に変化させていく */
+}
+@media screen and (max-width: 600px){
+    #mid_visual{
+        background-attachment: scroll;
+    }
 }
 
 /* SHOP */
@@ -917,4 +922,9 @@ footer a{
 .copyright{
     text-align: center;
     margin-top: 50px;
+}
+@media screen and (max-width: 600px){
+    footer{
+        background-attachment: scroll;
+    }
 }
