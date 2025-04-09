@@ -538,6 +538,7 @@ section{
     background-image: url(img/bg_whiter.png);
     padding: 100px 0 50px;
     filter: blur(5px);
+    position: relative;
 }
 #products.anime-on{
     animation: blur .5s linear forwards;
