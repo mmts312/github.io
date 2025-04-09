@@ -76,7 +76,6 @@ nextBtn.addEventListener('click', () => {
     nextBtn.disabled = true;
     prevBtn.disabled = true;
     const width = products[0].clientWidth + (margin * 2);
-    console.log(width);
     let left = productsBox.getBoundingClientRect().left;
     let right = productsBox.getBoundingClientRect().right;
     const translateX = left + -width;
