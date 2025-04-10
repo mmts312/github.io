@@ -65,5 +65,35 @@ aniElements.forEach((element) => {
     observer.observe(element);
 })
 
-const abouth2 = document.querySelectorAll('.about-h2 h2::after');
-console.log(abouth2);
+// オープニングアニメGSAP使用
+const openingBg = document.querySelector('.opening_bg');
+const openingTx = document.querySelector('.opening_text');
+const header = document.getElementById('js-header');
+gsap.set(openingTx, {
+    opacity: 0,
+});
+gsap.set(openingBg, {
+    y: 0,
+});
+gsap.set(header, {
+    opacity: 0,
+    y: -50,
+});
+gsap.timeline().to(openingTx,{
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.5,
+    }).to(openingTx, {
+        opacity: 0,
+        duration: 1,
+        delay: 1,
+    }).to(openingBg, {
+        x: "100%",
+        duration: 0.5,
+        delay: 0.5,
+    }).to(header, {
+        opacity: 1,
+        duration: .5,
+        y: 0,
+        delay: 0.5,
+    });
